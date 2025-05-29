@@ -788,7 +788,7 @@ static ARM_USART_MODEM_STATUS USART_GetModemStatus (void) {
   \fn          void UARTE0_UART0_IRQHandler (void)
   \brief       USART Interrupt handler.
 */
-void UARTE0_UART0_IRQHandler (void) {
+void UART0_UARTE0_IRQHandler (void) {
   uint32_t events, error_src, num_to_send, num_sent;
 
   events = 0U;
