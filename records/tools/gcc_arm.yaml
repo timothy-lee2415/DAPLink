@@ -14,7 +14,7 @@ tool_specific:
                 - -Og
                 - -g3
                 # - -Wall
-                - -Werror
+                #- -Werror
                 - -ffunction-sections
                 - -fdata-sections
                 - -std=gnu99

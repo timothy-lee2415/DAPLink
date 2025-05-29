@@ -347,7 +347,22 @@ void main_task(void * arg)
                        | FLAGS_BOARD_EVENT          // custom board event
                        , osFlagsWaitAny
                        , osWaitForever);
+#if 0
+        static int toggle = 0;
 
+        if (flags & FLAGS_MAIN_30MS)
+        {
+            if (toggle % 50 < 25)
+            {
+                gpio_set_port_pins();
+            }
+            else
+            {
+                gpio_clear_port_pins();
+            }
+            toggle++;
+        }
+#endif
         if (flags & FLAGS_MAIN_PROC_USB) {
             if (usb_test_mode) {
                 // When in USB test mode Insert a delay to
@@ -394,6 +409,7 @@ void main_task(void * arg)
 #ifdef DRAG_N_DROP_SUPPORT
             vfs_mngr_periodic(90); // FLAGS_MAIN_90MS
 #endif
+
             // Update USB connect status
             switch (usb_state) {
                 case USB_DISCONNECTING:
