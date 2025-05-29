@@ -43,8 +43,8 @@ COMPILER_ASSERT(DAPLINK_HIC_ID == DAPLINK_HIC_ID_NRF52840);
 
 #define GPIO_LED_ACTIVE_STATE 0
 #define RESET_BUTTON_PULL NRF_GPIO_PIN_PULLUP
-#define PIN_SWCLK         NRF_GPIO_PIN_MAP(0, 30) // SWDCLK (Output)
-#define PIN_SWDIO         NRF_GPIO_PIN_MAP(0, 31) // SWDIO (Input/Output)
+#define PIN_SWCLK         NRF_GPIO_PIN_MAP(1, 7) // SWDCLK (Output)
+#define PIN_SWDIO         NRF_GPIO_PIN_MAP(1, 8) // SWDIO (Input/Output)
 #define PIN_nRESET        NRF_GPIO_PIN_MAP(1, 9)  // nRESET Pin
 #undef LED_RUNNING                                // Target Running LED (Output)
 #undef LED_CONNECTED                              // Connected LED (Output)
