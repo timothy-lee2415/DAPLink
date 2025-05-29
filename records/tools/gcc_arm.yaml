@@ -11,7 +11,7 @@ tool_specific:
                 - c
                 - nosys
             common_flags:
-                - -Os
+                - -Og
                 - -g3
                 # - -Wall
                 - -Werror

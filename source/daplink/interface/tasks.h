@@ -26,7 +26,7 @@
 //  have to use the largest stack or these have to be defined in multiple places... Not ideal
 //  may want to move away from threads for some of these behaviours to optimize mempory usage (RAM)
 #ifndef MAIN_TASK_STACK
-#define MAIN_TASK_STACK     (864)
+#define MAIN_TASK_STACK     (4096)
 #endif
 #define MAIN_TASK_PRIORITY  (osPriorityNormal)
 

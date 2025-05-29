@@ -32,7 +32,7 @@ extern "C" {
 #endif
 
 #ifndef DAPLINK_DEBUG
-// #define DAPLINK_DEBUG
+#define DAPLINK_DEBUG
 #endif
 
 #if defined (DAPLINK_DEBUG)

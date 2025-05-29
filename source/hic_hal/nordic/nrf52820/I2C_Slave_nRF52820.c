@@ -176,9 +176,9 @@ static int32_t I2C_Initialize (ARM_I2C_SignalEvent_t cb_event, I2C_RESOURCES *i2
   // TWIS Configuration
   i2c->info->config.addr[0]   = RTE_TWIS0_ADDR0;
   i2c->info->config.addr[1]   = RTE_TWIS0_ADDR1;
-  i2c->info->config.scl       = RTE_TWIS0_SCL_PIN_NUM;
+  i2c->info->config.scl_pin   = RTE_TWIS0_SCL_PIN_NUM;
   i2c->info->config.scl_pull  = NRF_GPIO_PIN_NOPULL;
-  i2c->info->config.sda       = RTE_TWIS0_SDA_PIN_NUM;
+  i2c->info->config.sda_pin   = RTE_TWIS0_SDA_PIN_NUM;
   i2c->info->config.sda_pull  = NRF_GPIO_PIN_NOPULL;
   i2c->info->config.interrupt_priority = NRFX_TWIS_DEFAULT_CONFIG_IRQ_PRIORITY;
 
