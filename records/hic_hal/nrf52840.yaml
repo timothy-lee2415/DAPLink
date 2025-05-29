@@ -26,7 +26,7 @@ common:
     sources:
         hic_hal:
             - source/hic_hal/nordic/nrf52840
-            - source/hic_hal/nordic/nrf52820/cmsis
+            - source/hic_hal/nordic/nrf52820/cmsis #TODOs progen globs sources, we want to use the nrfx/mdk ideally
             - source/hic_hal/nordic/nrfx/drivers/src
             - source/hic_hal/nordic/shared
             - source/hic_hal/nordic/shared/nrf52
