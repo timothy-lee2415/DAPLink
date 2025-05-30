@@ -46,9 +46,6 @@ uint8_t gpio_get_reset_btn_fwrd(void);
 uint8_t gpio_get_pbon_btn(void);
 #endif
 
-void gpio_set_port_pins(void);
-void gpio_clear_port_pins(void);
-
 static inline uint8_t gpio_get_reset_btn(void)
 {
     return gpio_get_reset_btn_no_fwrd() || gpio_get_reset_btn_fwrd();

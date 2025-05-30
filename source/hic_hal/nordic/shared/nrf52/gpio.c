@@ -29,9 +29,6 @@
 #define GPIO_LED_STATE(state) (state ? 0 : 1)
 #endif
 
-//#define NRF_P0_BASE                 0x50000000UL
-//#define NRF_P1_BASE                 0x50000300UL
-
 void gpio_init(void)
 {
 #ifdef LED_PWR
@@ -51,9 +48,6 @@ void gpio_init(void)
     gpio_cfg_output(GPIO_REG(PIN_nRESET), GPIO_IDX(PIN_nRESET));
 #endif
     gpio_cfg_input(GPIO_REG(RESET_BUTTON), GPIO_IDX(RESET_BUTTON), RESET_BUTTON_PULL);
-
-    //gpio_cfg_output(NRF_P0_BASE, 30);
-    //gpio_cfg_output(NRF_P0_BASE, 31);
 }
 
 void gpio_set_hid_led(gpio_led_state_t state)
@@ -83,28 +77,4 @@ uint8_t gpio_get_reset_btn_fwrd(void)
 
 void gpio_set_board_power(bool powerEnabled)
 {
-}
-
-void gpio_set_port_pins(void)
-{
-#if 0
-    gpio_set(NRF_P0_BASE, 13);
-    gpio_set(NRF_P0_BASE, 14);
-    gpio_set(NRF_P0_BASE, 15);
-
-    gpio_set(NRF_P0_BASE, 30);
-    gpio_set(NRF_P0_BASE, 31);
-#endif
-}
-
-void gpio_clear_port_pins(void)
-{
-#if 0
-    gpio_clear(NRF_P0_BASE, 13);
-    gpio_clear(NRF_P0_BASE, 14);
-    gpio_clear(NRF_P0_BASE, 15);
-
-    gpio_clear(NRF_P0_BASE, 30);
-    gpio_clear(NRF_P0_BASE, 31);
-#endif
 }
